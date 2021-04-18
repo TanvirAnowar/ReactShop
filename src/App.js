@@ -4,6 +4,7 @@ import React from 'react'
 // import UseStateObject from './UserState/use-state-object'
 import UseStateCounter from './UserState/UseStateCounter'
 import UseEffectCleanup from './UseEffect/UseEffectCleanup'
+import UserEffectAsync from './UseEffect/UserEffectAsync'
 
 function App() {
   return (
@@ -13,7 +14,8 @@ function App() {
       {/* <UseStateArray></UseStateArray> */}
       {/* <UseStateObject></UseStateObject> */}
       {/* <UseStateCounter></UseStateCounter> */}
-      <UseEffectCleanup></UseEffectCleanup>
+      {/* <UseEffectCleanup></UseEffectCleanup> */}
+      <UserEffectAsync></UserEffectAsync>
     </div>
   )
 }
