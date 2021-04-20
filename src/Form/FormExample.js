@@ -6,7 +6,7 @@ const FormExample = () => {
         name:'',email:'', age:''
     });
 
-    //const []
+    const [people, setPeople] = React.useState([]);
 
     const changeHandler =(e) =>{
        const name = e.target.name;
@@ -17,8 +17,13 @@ const FormExample = () => {
     const submitHandler = (e) =>{
 
         e.preventDefault();
-        console.log("submit");
-        console.log(person);
+       // console.log("submit");
+       var newPerson = {...person, id: new Date().getTime().toString()}
+        setPeople([...people,newPerson]);
+        setPerson({
+            name:'',email:'', age:''
+        });
+        console.log(people,people.length);
 
     };
     return (
@@ -29,6 +34,18 @@ const FormExample = () => {
             <input type="text" name="age" value={person.age} onChange={changeHandler}></input>    
             <button type="submit" onClick={submitHandler}>add person</button> 
         </form>
+        <div>
+            {people.map((person) => {
+                const { id, name, email, age } = person;
+                return (
+                    <div key={id} className='item'>
+                    <h4>{name}</h4>
+                    <p>{email}</p>
+                    <p>{age}</p>
+                    </div>
+                );
+        })}
+        </div>
         </>
     )
 }
