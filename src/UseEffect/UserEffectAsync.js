@@ -1,4 +1,3 @@
-import { getSuggestedQuery } from '@testing-library/dom';
 import React from 'react'
 
 const UserEffectAsync = () => {
@@ -24,10 +23,9 @@ const UserEffectAsync = () => {
             users.map((user)=>{
                 const {id,login,avatar_url,html_url} = user
                 return<li key={id}>
-                        <img src={avatar_url}></img>
+                        <img src={avatar_url} alt=""></img>
                         <div>
-                            <h4>
-                                
+                            <h4>                                
                                 <a href={html_url}>{login}</a>
                             </h4>
                         </div>
