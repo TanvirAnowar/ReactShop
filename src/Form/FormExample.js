@@ -44,7 +44,9 @@ const FormExample = () => {
                     <p>{age}</p>
                     </div>
                 );
-        })}
+            }
+        )
+        }
         </div>
         </>
     )

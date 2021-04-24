@@ -1,7 +1,7 @@
 import React from 'react'
 import {data} from './data'
 
-const UseStaeArray = () => {
+const UseStateArray = () => {
 
     const [people,setPeople] = React.useState(data);
 
@@ -32,6 +32,6 @@ const UseStaeArray = () => {
     )
 }
 
-export default UseStaeArray
+export default UseStateArray
 
 

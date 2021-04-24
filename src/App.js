@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useReducer } from 'react'
+import Index from './UseReducerExample'
 // import ErrorExample from './UserState/error-example'
 // import UseStateArray from './UserState/use-state-array'
 // import UseStateObject from './UserState/use-state-object'
 // import UseStateCounter from './UserState/UseStateCounter'
 // import UseEffectCleanup from './UseEffect/UseEffectCleanup'
 // import UserEffectAsync from './UseEffect/UserEffectAsync'
-import FormExample from './Form/FormExample'
+//import FormExample from './Form/FormExample'
+ import UseReducerExample from './UseReducerExample'
+
 
 function App() {
   return (
@@ -17,7 +20,8 @@ function App() {
       {/* <UseStateCounter></UseStateCounter> */}
       {/* <UseEffectCleanup></UseEffectCleanup> */}
       {/* <UserEffectAsync></UserEffectAsync> */}
-      <FormExample></FormExample>
+      {/* <FormExample></FormExample> */}
+      <UseReducerExample />
     </div>
   )
 }
