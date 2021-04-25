@@ -5,32 +5,29 @@ import { data } from '../UserState/data';
 // reducer function
 
 const reducer =(state,action)=>{
-
+    console.log(state,action);
+    return state;
 }
+
+const defaultState = {
+    people:[],
+    isModalOpen:false,
+    modalContent:''
+};
 
 const Index = () => {
 
     const[name,setName] = useState('');
-    const[state,dispatch] = useReducer(reducer);
+    const[state,dispatch] = useReducer(reducer,defaultState);
 
     const handleSubmit = (e) =>{
         e.preventDefault();
 
         if(name){
-            setPeople(
-                [
-                    ...people,
-                    {
-                        id: new Date().getTime().toString(),
-                        name: name
-                    }
-                ]
-            );
-
-            setName('');
+            dispatch({type:'Testing'})
 
         }else{
-            setShowModal(true);
+
         }
 
     };
@@ -38,7 +35,7 @@ const Index = () => {
     return (
         <>
             <h2>useReducer</h2>;
-            {showModal && <Modal/>}
+            {state.isModalOpen && <Modal modalContent={state.modalContent}/>}
             <form onSubmit={handleSubmit}>
                 <div>
                     <input type="text" value={name}
@@ -49,11 +46,11 @@ const Index = () => {
             </form>
 
             {
-                people.map(
-                    (people) =>{
-                        return <div key={people.key}>
+                state.people.map(
+                    (person) =>{
+                        return <div key={person.key}>
                             <h3>
-                                {people.name}
+                                {person.name}
                             </h3>
                         </div>
                     }
