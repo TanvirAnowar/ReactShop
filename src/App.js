@@ -1,5 +1,5 @@
-import React, { useReducer } from 'react'
-import Index from './UseReducerExample'
+// import React, { useReducer } from 'react'
+// import Index from './UseReducerExample'
 // import ErrorExample from './UserState/error-example'
 // import UseStateArray from './UserState/use-state-array'
 // import UseStateObject from './UserState/use-state-object'
@@ -7,7 +7,8 @@ import Index from './UseReducerExample'
 // import UseEffectCleanup from './UseEffect/UseEffectCleanup'
 // import UserEffectAsync from './UseEffect/UserEffectAsync'
 //import FormExample from './Form/FormExample'
- import UseReducerExample from './UseReducerExample'
+//  import UseReducerExample from './UseReducerExample'
+ import UseContextExample from './UseContextExample'
 
 
 function App() {
@@ -21,7 +22,8 @@ function App() {
       {/* <UseEffectCleanup></UseEffectCleanup> */}
       {/* <UserEffectAsync></UserEffectAsync> */}
       {/* <FormExample></FormExample> */}
-      <UseReducerExample />
+      {/* <UseReducerExample /> */}
+      <UseContextExample />
     </div>
   )
 }

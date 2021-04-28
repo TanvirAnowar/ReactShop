@@ -1,11 +1,19 @@
 import React from 'react'
-import {BrowserRouter as Router, Route , Link} from 'react-router-dom'
+import Shop from './shop'
+import About from './about'
+import {BrowserRouter as Router,Switch, Route} from 'react-router-dom'
 
 const Index = () => {
     return (
-        <div>
-            hi
-        </div>
+        <>
+            <Router>
+                <div>                     
+                    <Route path='/shop' component={Shop} />
+
+                    <Route path='/about' component={About} />                    
+                </div>
+            </Router>
+        </>
     )
 }
 
