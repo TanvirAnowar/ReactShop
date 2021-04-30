@@ -8,8 +8,8 @@
 // import UserEffectAsync from './UseEffect/UserEffectAsync'
 //import FormExample from './Form/FormExample'
 //  import UseReducerExample from './UseReducerExample'
+//  import RoutingExample from './RoutingExample'
  import UseContextExample from './UseContextExample'
-
 
 function App() {
   return (
@@ -23,6 +23,7 @@ function App() {
       {/* <UserEffectAsync></UserEffectAsync> */}
       {/* <FormExample></FormExample> */}
       {/* <UseReducerExample /> */}
+      {/* <RoutingExample /> */}
       <UseContextExample />
     </div>
   )

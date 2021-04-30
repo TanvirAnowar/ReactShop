@@ -1,8 +1,7 @@
 import React from 'react'
-import Shop from './shop'
 import About from './about'
+import Home from './home'
 import Navigation from './navigation'
-import User from './user'
 
 import {BrowserRouter as Router,Switch, Route} from 'react-router-dom'
 
@@ -12,15 +11,12 @@ const Index = () => {
             <Router>
                 <Navigation />
 
-                <Switch>                 
-                                            
-                    {/* <Route path='/' exact component={Index} /> */}
+                <Switch>                                   
 
-                    <Route path='/shop' component={Shop} />
+                    <Route path='/about' exact component={About} />        
+                    <Route path='/home' exact component={Home} />        
 
-                    <Route path='/about' component={About} />        
-
-                     <Route path='/user/:id' component={User} />            
+                             
                 </Switch>
             </Router>
         </>
