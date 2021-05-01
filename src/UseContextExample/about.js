@@ -1,9 +1,12 @@
 import React from 'react'
+import {InfoContext} from './infoContext'
 
 const About = () => {
+        const {infoContextValue , setInfoContextValue} = React.useContext(InfoContext);
+
     return (
         <div>
-            About x
+            About - {infoContextValue}
         </div>
     )
 }
